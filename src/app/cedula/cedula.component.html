@@ -1,0 +1,12 @@
+<div>
+    <input type="text" [(ngModel)]="nombre" placeholder="Nombre">
+    <input type="text" [(ngModel)]="numeroCedula" placeholder="Número de Cédula">
+    <button (click)="guardar()">Guardar</button>
+    <button (click)="mostrarProvincia()">Provincia</button>
+</div>
+<div>
+    <h3>Provincia: {{ provincia }}</h3>
+</div>
+<div *ngFor="let cedula of cedulas">
+    <p>{{ cedula.nombre }} - {{ cedula.numeroCedula }}</p>
+  </div>
